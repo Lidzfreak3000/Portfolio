@@ -1,0 +1,27 @@
+.scroll-indicator {
+    position: fixed;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.scroll-indicator a {
+    padding: 10px;
+    position: relative;
+}
+
+.scroll-indicator a::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+
+.scroll-indicator a.active::after {
+    background: red;
+}
