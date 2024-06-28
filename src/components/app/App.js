@@ -1,6 +1,9 @@
 import React from 'react';
 import Section from '../section/Section.js';
 import ScrollIndicator from '../scrollIndicator/ScrollIndicator.js'
+import CustomCursor from '../cursorTracker/CursorTracker.js';
+import AnimatedBackground from '../animatedBackground/AnimatedBackground.js'
+
 import './App.css';
 
 function App() {
@@ -31,8 +34,10 @@ function App() {
 
   return (
     <div>
+      <AnimatedBackground />
+      <CustomCursor />
       {/* <Intro /> */}
-      <div id="scrollBox" className="container w-screen">
+      <div id="scrollBox" className="container max-w-full">
         <ScrollIndicator visibileSection={visibileSection} />
 
         <Section id="home" setVisibleSection={setVisibleSection} />

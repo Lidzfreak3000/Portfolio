@@ -1,0 +1,16 @@
+.main-cursor {
+    z-index: 10000;
+    pointer-events: none;
+    transform: translate3d(0, 0, 0);
+    position: fixed;
+    transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1);
+    animation: fadeIn 1s cubic-bezier(0.77, 0, 0.175, 1) 0s forwards;
+    mix-blend-mode: difference;
+}
+
+.main-cursor-background {
+    width: 3vw;
+    background: white;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
