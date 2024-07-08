@@ -19,6 +19,7 @@
     "react-scripts": "^5.0.1"
   },
   "devDependencies": {
+    "@azure/static-web-apps-cli": "^1.1.10",
     "@babel/plugin-proposal-private-property-in-object": "latest",
     "daisyui": "^4.12.10",
     "tailwindcss": "^3.4.4"
