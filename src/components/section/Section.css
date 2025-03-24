@@ -1,36 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
 .section {
     width: 100%;
     height: 100vh;
     background-size:  cover;
     scroll-snap-align: start;
+    font-family: "Tektur", sans-serif;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.sectionHeader {
+  position: relative;
+  top: 25vh;
+  font-weight: 900;
+}
+
+.card-wrapper{
+  position: relative;
+
+  top: 30vh;
+  left: 25vw;
+  width: 50vw;
+  height: 50vh;
+  @apply rounded-2xl overflow-hidden
+}
+
+.card-wrapper::before {
+  background: conic-gradient(
+    oklch(var(--p)) 0deg,
+    rgba(252, 70, 106, 1) 0deg,
+    transparent 80deg
+  );
+  animation: border-spin 7s linear infinite;
+
+  @apply absolute h-[200%] w-[200%] content-[''] left-[-50%] top-[-50%]
+}
+
+.card-content{
+  background-color: rgba(19, 11, 48, 1);
+  @apply absolute w-[calc(100%-4px)] h-[calc(100%-4px)] top-[2px] left-[2px] rounded-2xl
+}
+
+@keyframes border-spin {
+  100% {
+      transform: rotate(-360deg);
   }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
-  
-  .App-header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-      transform: rotate(360deg);
-    }
-  }
+}

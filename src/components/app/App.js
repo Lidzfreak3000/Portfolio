@@ -40,7 +40,9 @@ function App() {
       <div id="scrollBox" className="container max-w-full">
         <ScrollIndicator visibileSection={visibileSection} />
 
-        <Section id="home" setVisibleSection={setVisibleSection} />
+        <Section id="home" setVisibleSection={setVisibleSection}>
+          <h1 className=''> Welcome to my personal site 😎</h1>
+        </Section>
         <Section id="about" setVisibleSection={setVisibleSection} />
         <Section id="projects" setVisibleSection={setVisibleSection} />
         <Section id="contact" setVisibleSection={setVisibleSection} />

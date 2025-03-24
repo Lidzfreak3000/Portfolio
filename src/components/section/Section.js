@@ -1,18 +1,17 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
 import './Section.css';
 
 function Section(props) {
-    const [name, setName] = React.useState("World");
-
     return (
-        <div id={props.id} className="App section">
-            {/* <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <h1>Hello, {name}!</h1>
-                <h2>{props.id}</h2>
-                <input type="text" onChange={(e) => setName(e.target.value)} />
-            </header> */}
+        <div id={props.id} className="section">
+            <header className="sectionHeader">
+                <h1 className="mx-auto w-fit text-7xl">{props.id}</h1>
+            </header>
+            <div className="card-wrapper">
+                <div className="card-content">
+                    {props.children}
+                </div>
+            </div>
         </div>
     );
 }
