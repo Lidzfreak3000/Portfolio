@@ -3,44 +3,65 @@ import './CarouselCard.css';
 function CarouselCard(props) {
 
     return (
-        <div className="carousel">
-            <div id="slide1" className="card-wrapper carousel-item relative w-full">
-                <div className="card-content">
-                    {props.children}
+        <>
+            <div className="carousel carousel-center bg-neutral rounded-box space-x-4 p-4">
+                <div className="carousel-item">
+                    <div className="carousel-card-wrapper">
+                        <div className="carousel-card-content">
+                            {props.children}
+                        </div>
+                    </div>
                 </div>
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
+                <div className="carousel-item">
+                    <div className="carousel-card-wrapper">
+                        <div className="carousel-card-content">
+                            {props.children}
+                        </div>
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <div className="carousel-card-wrapper">
+                        <div className="carousel-card-content">
+                            {props.children}
+                        </div>
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <div className="carousel-card-wrapper">
+                        <div className="carousel-card-content">
+                            {props.children}
+                        </div>
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <div className="carousel-card-wrapper">
+                        <div className="carousel-card-content">
+                            {props.children}
+                        </div>
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <div className="carousel-card-wrapper">
+                        <div className="carousel-card-content">
+                            {props.children}
+                        </div>
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <div className="carousel-card-wrapper">
+                        <div className="carousel-card-content">
+                            {props.children}
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="slide2" className="card-wrapper carousel-item relative">
-                <div className="card-content">
-                    {props.children}
-                </div>
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
-                </div>
+            <div className="carousel-indicator-buttons">
+                <a href="#item1" className="btn btn-xs">1</a>
+                <a href="#item2" className="btn btn-xs">2</a>
+                <a href="#item3" className="btn btn-xs">3</a>
+                <a href="#item4" className="btn btn-xs">4</a>
             </div>
-            <div id="slide3" className="card-wrapper carousel-item relative">
-                <div className="card-content">
-                    {props.children}
-                </div>
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-            <div id="slide4" className="card-wrapper carousel-item relative">
-                <div className="card-content">
-                    {props.children}
-                </div>
-                <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
-                </div>
-            </div>
-        </div>
+        </>
     );
 }
 
