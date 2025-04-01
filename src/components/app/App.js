@@ -44,7 +44,7 @@ function App() {
           <h1 className=''> Welcome to my personal site 😎</h1>
         </Section>
         <Section id="about" setVisibleSection={setVisibleSection} />
-        <Section id="projects" setVisibleSection={setVisibleSection} />
+        <Section id="projects" setVisibleSection={setVisibleSection} carousel={true} />
         <Section id="contact" setVisibleSection={setVisibleSection} />
       </div>
     </div>
