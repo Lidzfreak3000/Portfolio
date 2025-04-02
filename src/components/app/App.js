@@ -19,7 +19,6 @@ function App() {
       entries.forEach(
         (entry) => {
           if (entry.isIntersecting) {
-            console.log(entry);
             setVisibleSection(entry.target.id)
           }
         });

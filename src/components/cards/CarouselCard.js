@@ -1,6 +1,12 @@
+import { useState } from 'react';
 import './CarouselCard.css';
 
 function CarouselCard(props) {
+    const [carouselItem, setCarouselItem] = useState(1);
+
+    function handleClick(itemID) {
+        setCarouselItem(id => itemID)
+    }
 
     return (
         <>
@@ -55,11 +61,11 @@ function CarouselCard(props) {
                     </div>
                 </div>
             </div>
-            <div className="carousel-indicator-buttons">
-                <a href="#item1" className="btn btn-xs">1</a>
-                <a href="#item2" className="btn btn-xs">2</a>
-                <a href="#item3" className="btn btn-xs">3</a>
-                <a href="#item4" className="btn btn-xs">4</a>
+            <div id="carousel-indicator-buttons" className="join bg-neutral rounded-box">
+                <input className="join-item btn btn-square" type="radio" name="options" aria-label="1" checked={carouselItem === 1} />
+                <input className="join-item btn btn-square" type="radio" name="options" aria-label="2" checked={carouselItem === 2} />
+                <input className="join-item btn btn-square" type="radio" name="options" aria-label="3" checked={carouselItem === 3} />
+                <input className="join-item btn btn-square" type="radio" name="options" aria-label="4" checked={carouselItem === 4} />
             </div>
         </>
     );
