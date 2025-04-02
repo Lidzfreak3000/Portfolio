@@ -22,13 +22,13 @@
             transparent 80deg);
     animation: border-spin 7s linear infinite;
 
-    @apply absolute h-[300%] w-[300%] content-[''] left-[-100%] top-[-100%]
+    @apply absolute h-[400%] w-[400%] content-[''] left-[-150%] top-[-150%]
 }
 
 .carousel-card-content {
     overflow: hidden;
     background-color: rgba(19, 11, 48, 1);
-    @apply absolute w-[calc(100%-4px)] h-[calc(100%-4px)] top-[2px] left-[2px] rounded-2xl
+    @apply absolute w-[calc(100%-8px)] h-[calc(100%-8px)] top-[4px] left-[4px] rounded-2xl
 }
 
 .carousel {

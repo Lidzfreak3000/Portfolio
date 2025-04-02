@@ -22,12 +22,14 @@ const CustomCursor = () => {
 
       positionRef.current.mouseX = mouseX;
       positionRef.current.mouseY = mouseY;
-      mainCursor.current.style.transform = `translate3d(${mouseX -
-        mainCursor.current.clientWidth / 2}px, ${mouseY -
-        mainCursor.current.clientHeight / 2}px, 0)`;
+      if (mainCursor && mainCursor.current) {
+        mainCursor.current.style.transform = `translate3d(${mouseX -
+          mainCursor.current.clientWidth / 2}px, ${mouseY -
+          mainCursor.current.clientHeight / 2}px, 0)`;
+      }
     });
 
-    return () => {};
+    return () => { };
   }, []);
 
   React.useEffect(() => {
@@ -49,7 +51,7 @@ const CustomCursor = () => {
         positionRef.current.distanceY = (mouseY - destinationY) * 0.1;
         if (
           Math.abs(positionRef.current.distanceX) +
-            Math.abs(positionRef.current.distanceY) <
+          Math.abs(positionRef.current.distanceY) <
           0.1
         ) {
           positionRef.current.destinationX = mouseX;
@@ -62,6 +64,7 @@ const CustomCursor = () => {
     };
     followMouse();
   }, []);
+
   return (
     <div className={`cursor-wrapper`}>
       <div className="main-cursor " ref={mainCursor}>
