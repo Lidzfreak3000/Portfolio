@@ -1,0 +1,29 @@
+.card-wrapper {
+    position: relative;
+
+    top: 30vh;
+    left: 25vw;
+    width: 50vw;
+    height: 50vh;
+    @apply rounded-2xl overflow-hidden
+}
+
+.card-wrapper::before {
+    background: conic-gradient(oklch(var(--p)) 0deg,
+            rgba(252, 70, 106, 1) 0deg,
+            transparent 80deg);
+    animation: border-spin 7s linear infinite;
+
+    @apply absolute h-[300%] w-[300%] content-[''] left-[-100%] top-[-100%]
+}
+
+.card-content {
+    background-color: rgba(19, 11, 48, 1);
+    @apply absolute w-[calc(100%-8px)] h-[calc(100%-8px)] top-[4px] left-[4px] rounded-2xl p-4
+}
+
+@keyframes border-spin {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
