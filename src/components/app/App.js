@@ -1,15 +1,19 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import Section from '../section/Section.js';
 import ScrollIndicator from '../scrollIndicator/ScrollIndicator.js'
 import CustomCursor from '../cursorTracker/CursorTracker.js';
 import AnimatedBackground from '../animatedBackground/AnimatedBackground.js'
 
 import './App.css';
+import Home from '../../views/home/home.js';
+import About from '../../views/about/about.js';
+import Projects from '../../views/projects/projects.js';
+import Contact from '../../views/contact/contact.js';
 
 function App() {
-  const [visibileSection, setVisibleSection] = React.useState("home");
+  const [visibileSection, setVisibleSection] = useState("home");
 
-  React.useEffect(() => {
+  useEffect(() => {
     const sections = document.querySelectorAll(".section")
     let observerOptions = {
       threshold: 0.5
@@ -35,16 +39,12 @@ function App() {
     <div>
       <AnimatedBackground />
       <CustomCursor />
-      {/* <Intro /> */}
       <div id="scrollBox" className="container max-w-full">
         <ScrollIndicator visibileSection={visibileSection} />
-
-        <Section id="home" setVisibleSection={setVisibleSection}>
-          <h1 className=''> Welcome to my personal site 😎</h1>
-        </Section>
-        <Section id="about" setVisibleSection={setVisibleSection} />
-        <Section id="projects" setVisibleSection={setVisibleSection} carousel={true} />
-        <Section id="contact" setVisibleSection={setVisibleSection} />
+        <Home setVisibleSection={setVisibleSection}/>
+        <About setVisibleSection={setVisibleSection}/>
+        <Projects setVisibleSection={setVisibleSection}/>
+        <Contact setVisibleSection={setVisibleSection}/>
       </div>
     </div>
   );

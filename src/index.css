@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+@utility pause-animation {
+  animation-play-state: paused;
+}
