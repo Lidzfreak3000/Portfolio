@@ -15,8 +15,6 @@ function Home(props) {
     }, [])
 
     useEffect(() => {
-        console.log("length: " + messages.length);
-
         const timer = setInterval(() => {
             setCurrentMessage(prev => {
                 if (prev >= messages.length) {
@@ -29,8 +27,6 @@ function Home(props) {
 
         return () => clearInterval(timer);
     }, [messages]);
-
-    useEffect(() => { console.log(currentMessage) }, [currentMessage])
 
     return (
         <Section id="home" setVisibleSection={props.setVisibleSection}>
