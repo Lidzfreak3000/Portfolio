@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ChatMessage from "../../components/chatMessage/chatMessage";
 import Section from "../../components/section/Section";
 
@@ -23,7 +23,7 @@ function Home(props) {
                 }
                 return prev + 1;
             });
-        }, defaultDelay); // 500ms delay between items
+        }, defaultDelay);
 
         return () => clearInterval(timer);
     }, [messages]);
@@ -31,7 +31,7 @@ function Home(props) {
     return (
         <Section id="home" setVisibleSection={props.setVisibleSection}>
             <ChatMessage id="1" delay={defaultDelay} currentMessage={currentMessage}>
-                Welcome to my personal Webiste!
+                Welcome to my personal site!
             </ChatMessage>
             <ChatMessage id="2" delay={defaultDelay} currentMessage={currentMessage}>
                 Feel free to check out <a href="#about" className="link link-secondary">About</a> to learn more about me.

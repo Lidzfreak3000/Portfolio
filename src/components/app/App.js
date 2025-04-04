@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Section from '../section/Section.js';
 import ScrollIndicator from '../scrollIndicator/ScrollIndicator.js'
 import CustomCursor from '../cursorTracker/CursorTracker.js';
 import AnimatedBackground from '../animatedBackground/AnimatedBackground.js'
@@ -9,10 +8,16 @@ import Home from '../../views/home/home.js';
 import About from '../../views/about/about.js';
 import Projects from '../../views/projects/projects.js';
 import Contact from '../../views/contact/contact.js';
+import Home from '../../views/home/home.js';
+import About from '../../views/about/about.js';
+import Projects from '../../views/projects/projects.js';
+import Contact from '../../views/contact/contact.js';
 
 function App() {
   const [visibileSection, setVisibleSection] = useState("home");
+  const [visibileSection, setVisibleSection] = useState("home");
 
+  useEffect(() => {
   useEffect(() => {
     const sections = document.querySelectorAll(".section")
     let observerOptions = {
@@ -41,6 +46,10 @@ function App() {
       <CustomCursor />
       <div id="scrollBox" className="container max-w-full">
         <ScrollIndicator visibileSection={visibileSection} />
+        <Home setVisibleSection={setVisibleSection}/>
+        <About setVisibleSection={setVisibleSection}/>
+        <Projects setVisibleSection={setVisibleSection}/>
+        <Contact setVisibleSection={setVisibleSection}/>
         <Home setVisibleSection={setVisibleSection}/>
         <About setVisibleSection={setVisibleSection}/>
         <Projects setVisibleSection={setVisibleSection}/>
