@@ -1,19 +1,19 @@
 import Section from "../../components/section/Section";
+import "./about.css";
 
 function About(props) {
     return (
         <Section id="about" setVisibleSection={props.setVisibleSection}>
-            <figure className="diff h-full w-full" tabIndex={0}>
-                <div className="diff-item-1" role="img">
-                    <div className="bg-primary text-primary-content grid place-content-center text-9xl font-black">
-                        DAISY
-                    </div>
-                </div>
-                <div className="diff-item-2" role="img" tabIndex={0}>
-                    <div className="bg-base-200 grid place-content-center text-9xl font-black">DAISY</div>
-                </div>
-                <div className="diff-resizer"></div>
-            </figure>
+            <div className="tabs tabs-border size-full content-start">
+                <input type="radio" name="my_tabs_1" className="tab" aria-label="Tab 1" />
+                <div className="tab-content border-base-300 bg-base-100 p-10">Tab content 1</div>
+
+                <input type="radio" name="my_tabs_1" className="tab" aria-label="Tab 2" defaultChecked />
+                <div className="tab-content border-base-300 bg-base-100 p-10">Tab content 2</div>
+
+                <input type="radio" name="my_tabs_1" className="tab" aria-label="Tab 3" />
+                <div className="tab-content border-base-300 bg-base-100 p-10">Tab content 3</div>
+            </div>
         </Section>
     );
 }
