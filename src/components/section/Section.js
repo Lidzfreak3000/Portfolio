@@ -1,13 +1,13 @@
 import React from 'react';
 import './Section.css';
 import BasicCard from '../cards/BasicCard';
-import CarouselCard from '../cards/CarouselCard';
+import Carousel from '../cards/Carousel';
 
 function Section(props) {
     var cardContent
 
     if (props.carousel) {
-        cardContent = <CarouselCard>{props.children}</CarouselCard>
+        cardContent = <Carousel>{props.children}</Carousel>
     } else {
         cardContent = <BasicCard>{props.children}</BasicCard>
     }
