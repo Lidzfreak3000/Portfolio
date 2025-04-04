@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ChatMessage from "../../components/chatMessage/chatMessage";
 import Section from "../../components/section/Section";
 
@@ -23,7 +23,7 @@ function Home(props) {
                 }
                 return prev + 1;
             });
-        }, defaultDelay); // 500ms delay between items
+        }, defaultDelay);
 
         return () => clearInterval(timer);
     }, [messages]);
