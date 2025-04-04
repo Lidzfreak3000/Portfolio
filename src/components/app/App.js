@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Section from '../section/Section.js';
 import ScrollIndicator from '../scrollIndicator/ScrollIndicator.js'
 import CustomCursor from '../cursorTracker/CursorTracker.js';
 import AnimatedBackground from '../animatedBackground/AnimatedBackground.js'
