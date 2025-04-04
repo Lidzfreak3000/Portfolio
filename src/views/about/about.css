@@ -709,7 +709,6 @@
     flex-shrink: 0;
     cursor: pointer;
     appearance: none;
-    border-radius: calc(infinity * 1px);
     padding: calc(0.25rem * 1);
     vertical-align: middle;
     border: var(--border) solid var(--input-color, color-mix(in srgb, currentColor 20%, #0000));
@@ -723,7 +722,6 @@
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: calc(infinity * 1px);
     --tw-content: "";
     content: var(--tw-content);
     background-size: auto, calc(var(--noise) * 100%);
