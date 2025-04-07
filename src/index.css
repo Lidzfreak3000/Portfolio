@@ -1,14 +1,27 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@source ".././public/*.{html,js}";
+@plugin "daisyui" {
+  themes: synthwave;
+  root: ":root";
+  include: ;
+  exclude: ;
+  prefix: ;
+  logs: true;
+}
 
-body {
-  margin: 0;
-  padding: 0;
-  overflow-y: hidden;
-  overflow-x: hidden;
+@theme {
+  --breakpoint-3xl: 1920px;
 }
 
 @utility pause-animation {
   animation-play-state: paused;
+}
+
+@layer utilities {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
 }

@@ -21,5 +21,5 @@
 }
 
 .scroll-indicator a.active::after {
-    background: oklch(var(--a));
+    background: var(--color-primary);
 }
