@@ -19,7 +19,3 @@
     border-radius: 50%;
     background: white;
 }
-
-.scroll-indicator a.active::after {
-    background: var(--color-primary);
-}

@@ -2,8 +2,8 @@ import './ScrollIndicator.css'
 import React from 'react';
 
 function ScrollIndicator(props) {
-    const activeSectionBtn = "active btn btn-circle btn-soft btn-accent"
-    const inactiveSectionBtn = "inactive btn btn-circle btn-soft bg-white"
+    const activeSectionBtn = "btn btn-active btn-circle btn-soft btn-accent"
+    const inactiveSectionBtn = "btn btn-circle btn-soft bg-white"
 
     return (
         <div className="scroll-indicator">
