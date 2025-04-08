@@ -17,6 +17,7 @@
     --text-7xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-extrabold: 800;
+    --radius-2xl: 1rem;
     --animate-bounce: bounce 1s infinite;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -187,7 +188,7 @@
       font-size: 0.875rem;
       line-height: 1.25em;
       transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
-      background-color: var(--0tt-bg);
+      background-color: var(--tt-bg);
       width: max-content;
       pointer-events: none;
       z-index: 1;
@@ -198,7 +199,7 @@
       position: absolute;
       position: absolute;
       opacity: 0%;
-      background-color: var(--0tt-bg);
+      background-color: var(--tt-bg);
       transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 75ms;
       content: "";
       pointer-events: none;
@@ -208,7 +209,7 @@
       mask-repeat: no-repeat;
       mask-position: -1px 0;
       --mask-tooltip: url("data:image/svg+xml,%3Csvg width='10' height='4' viewBox='0 0 8 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.500009 1C3.5 1 3.00001 4 5.00001 4C7 4 6.5 1 9.5 1C10 1 10 0.499897 10 0H0C-1.99338e-08 0.5 0 1 0.500009 1Z' fill='black'/%3E%3C/svg%3E%0A");
-      mask-image: var(--0mask-tooltip);
+      mask-image: var(--mask-tooltip);
     }
     &.tooltip-open, &[data-tip]:hover, &:hover, &:has(:focus-visible) {
       > .tooltip-content, &[data-tip]:before, &:after {
@@ -218,12 +219,12 @@
       }
     }
     > .tooltip-content, &[data-tip]:before {
-      transform: translateX(-50%) translateY(var(--0tt-pos, 0.25rem));
-      inset: auto auto var(--0tt-off) 50%;
+      transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
+      inset: auto auto var(--tt-off) 50%;
     }
     &:after {
-      transform: translateX(-50%) translateY(var(--0tt-pos, 0.25rem));
-      inset: auto auto var(--0tt-tail) 50%;
+      transform: translateX(-50%) translateY(var(--tt-pos, 0.25rem));
+      inset: auto auto var(--tt-tail) 50%;
     }
   }
   .tab {
@@ -252,11 +253,11 @@
     --tab-order: 0;
     --tab-radius-min: calc(0.75rem - var(--border));
     border-color: #0000;
-    order: var(--0tab-order);
+    order: var(--tab-order);
     height: calc(var(--size-field, 0.25rem) * 10);
     font-size: 0.875rem;
-    padding-inline-start: var(--0tab-p);
-    padding-inline-end: var(--0tab-p);
+    padding-inline-start: var(--tab-p);
+    padding-inline-end: var(--tab-p);
     &:is(input[type="radio"]) {
       min-width: fit-content;
       &:after {
@@ -322,51 +323,51 @@
     outline-offset: 2px;
     webkit-user-select: none;
     user-select: none;
-    padding-inline: var(--0btn-p);
-    color: var(--0btn-fg);
-    --tw-prose-links: var(--0btn-fg);
-    height: var(--0size);
-    font-size: var(--0fontsize, 0.875rem);
+    padding-inline: var(--btn-p);
+    color: var(--btn-fg);
+    --tw-prose-links: var(--btn-fg);
+    height: var(--size);
+    font-size: var(--fontsize, 0.875rem);
     font-weight: 600;
-    outline-color: var(--0btn-color, var(--color-base-content));
+    outline-color: var(--btn-color, var(--color-base-content));
     transition-property: color, background-color, border-color, box-shadow;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transition-duration: 0.2s;
-    border-start-start-radius: var(--0join-ss, var(--radius-field));
-    border-start-end-radius: var(--0join-se, var(--radius-field));
-    border-end-start-radius: var(--0join-es, var(--radius-field));
-    border-end-end-radius: var(--0join-ee, var(--radius-field));
-    background-color: var(--0btn-bg);
+    border-start-start-radius: var(--join-ss, var(--radius-field));
+    border-start-end-radius: var(--join-se, var(--radius-field));
+    border-end-start-radius: var(--join-es, var(--radius-field));
+    border-end-end-radius: var(--join-ee, var(--radius-field));
+    background-color: var(--btn-bg);
     background-size: auto, calc(var(--noise) * 100%);
-    background-image: none, var(--0btn-noise);
+    background-image: none, var(--btn-noise);
     border-width: var(--border);
     border-style: solid;
-    border-color: var(--0btn-border);
+    border-color: var(--btn-border);
     text-shadow: 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 0.15));
-    box-shadow: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%)) inset, var(--0btn-shadow);
+    box-shadow: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(var(--depth) * 6%)) inset, var(--btn-shadow);
     --size: calc(var(--size-field, 0.25rem) * 10);
-    --btn-bg: var(--0btn-color, var(--color-base-200));
+    --btn-bg: var(--btn-color, var(--color-base-200));
     --btn-fg: var(--color-base-content);
     --btn-p: 1rem;
-    --btn-border: var(--0btn-bg);
+    --btn-border: var(--btn-bg);
     @supports (color: color-mix(in lab, red, red)) {
-      --btn-border: color-mix(in oklab, var(--0btn-bg), #000 calc(var(--depth) * 5%));
+      --btn-border: color-mix(in oklab, var(--btn-bg), #000 calc(var(--depth) * 5%));
     }
-    --btn-shadow: 0 3px 2px -2px var(--0btn-bg),
-    0 4px 3px -2px var(--0btn-bg);
+    --btn-shadow: 0 3px 2px -2px var(--btn-bg),
+    0 4px 3px -2px var(--btn-bg);
     @supports (color: color-mix(in lab, red, red)) {
-      --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--0btn-bg) calc(var(--depth) * 30%), #0000),
-    0 4px 3px -2px color-mix(in oklab, var(--0btn-bg) calc(var(--depth) * 30%), #0000);
+      --btn-shadow: 0 3px 2px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000),
+    0 4px 3px -2px color-mix(in oklab, var(--btn-bg) calc(var(--depth) * 30%), #0000);
     }
-    --btn-noise: var(--0fx-noise);
+    --btn-noise: var(--fx-noise);
     .prose & {
       text-decoration-line: none;
     }
     @media (hover: hover) {
       &:hover {
-        --btn-bg: var(--0btn-color, var(--color-base-200));
+        --btn-bg: var(--btn-color, var(--color-base-200));
         @supports (color: color-mix(in lab, red, red)) {
-          --btn-bg: color-mix(in oklab, var(--0btn-color, var(--color-base-200)), #000 7%);
+          --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
         }
       }
     }
@@ -376,13 +377,13 @@
     }
     &:active:not(.btn-active) {
       translate: 0 0.5px;
-      --btn-bg: var(--0btn-color, var(--color-base-200));
+      --btn-bg: var(--btn-color, var(--color-base-200));
       @supports (color: color-mix(in lab, red, red)) {
-        --btn-bg: color-mix(in oklab, var(--0btn-color, var(--color-base-200)), #000 5%);
+        --btn-bg: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 5%);
       }
-      --btn-border: var(--0btn-color, var(--color-base-200));
+      --btn-border: var(--btn-color, var(--color-base-200));
       @supports (color: color-mix(in lab, red, red)) {
-        --btn-border: color-mix(in oklab, var(--0btn-color, var(--color-base-200)), #000 7%);
+        --btn-border: color-mix(in oklab, var(--btn-color, var(--color-base-200)), #000 7%);
       }
       --btn-shadow: 0 0 0 0 oklch(0% 0 0/0), 0 0 0 0 oklch(0% 0 0/0);
     }
@@ -456,8 +457,8 @@
         height: calc(0.25rem * 2);
         width: 100%;
         border: 1px solid;
-        color: var(--0step-bg);
-        background-color: var(--0step-bg);
+        color: var(--step-bg);
+        background-color: var(--step-bg);
         --tw-content: "";
         content: var(--tw-content);
         margin-inline-start: -100%;
@@ -466,9 +467,9 @@
         content: counter(step);
         counter-increment: step;
         z-index: 1;
-        color: var(--0step-fg);
-        background-color: var(--0step-bg);
-        border: 1px solid var(--0step-bg);
+        color: var(--step-fg);
+        background-color: var(--step-bg);
+        border: 1px solid var(--step-bg);
         position: relative;
         grid-column-start: 1;
         grid-row-start: 1;
@@ -548,7 +549,7 @@
         position: relative;
         content: "00\A 01\A 02\A 03\A 04\A 05\A 06\A 07\A 08\A 09\A 10\A 11\A 12\A 13\A 14\A 15\A 16\A 17\A 18\A 19\A 20\A 21\A 22\A 23\A 24\A 25\A 26\A 27\A 28\A 29\A 30\A 31\A 32\A 33\A 34\A 35\A 36\A 37\A 38\A 39\A 40\A 41\A 42\A 43\A 44\A 45\A 46\A 47\A 48\A 49\A 50\A 51\A 52\A 53\A 54\A 55\A 56\A 57\A 58\A 59\A 60\A 61\A 62\A 63\A 64\A 65\A 66\A 67\A 68\A 69\A 70\A 71\A 72\A 73\A 74\A 75\A 76\A 77\A 78\A 79\A 80\A 81\A 82\A 83\A 84\A 85\A 86\A 87\A 88\A 89\A 90\A 91\A 92\A 93\A 94\A 95\A 96\A 97\A 98\A 99\A";
         white-space: pre;
-        top: calc(var(--0value) * -1em);
+        top: calc(var(--value) * -1em);
         text-align: center;
         transition: all 1s cubic-bezier(1, 0, 0, 1);
       }
@@ -556,13 +557,13 @@
   }
   .tabs-border {
     .tab {
-      --tab-border-color: #0000 #0000 var(--0tab-border-color) #0000;
+      --tab-border-color: #0000 #0000 var(--tab-border-color) #0000;
       position: relative;
       border-radius: var(--radius-field);
       &:before {
         --tw-content: "";
         content: var(--tw-content);
-        background-color: var(--0tab-border-color);
+        background-color: var(--tab-border-color);
         transition: background-color 0.2s ease;
         width: 80%;
         height: 3px;
@@ -600,7 +601,7 @@
       background-color: inherit;
       content: "";
       mask-repeat: no-repeat;
-      mask-image: var(--0mask-chat);
+      mask-image: var(--mask-chat);
       mask-position: 0px -1px;
       mask-size: 13px;
     }
@@ -701,15 +702,15 @@
     border-radius: calc(infinity * 1px);
     padding: calc(0.25rem * 1);
     vertical-align: middle;
-    border: var(--border) solid var(--0input-color, currentColor);
+    border: var(--border) solid var(--input-color, currentColor);
     @supports (color: color-mix(in lab, red, red)) {
-      border: var(--border) solid var(--0input-color, color-mix(in srgb, currentColor 20%, #0000));
+      border: var(--border) solid var(--input-color, color-mix(in srgb, currentColor 20%, #0000));
     }
     box-shadow: 0 1px oklch(0% 0 0 / calc(var(--depth) * 0.1)) inset;
     --size: calc(var(--size-selector, 0.25rem) * 6);
-    width: var(--0size);
-    height: var(--0size);
-    color: var(--0input-color, currentColor);
+    width: var(--size);
+    height: var(--size);
+    color: var(--input-color, currentColor);
     &:before {
       display: block;
       width: 100%;
@@ -718,7 +719,7 @@
       --tw-content: "";
       content: var(--tw-content);
       background-size: auto, calc(var(--noise) * 100%);
-      background-image: none, var(--0fx-noise);
+      background-image: none, var(--fx-noise);
     }
     &:focus-visible {
       outline: 2px solid currentColor;
@@ -785,7 +786,7 @@
     }
   }
   .tab-content {
-    order: var(--0tabcontent-order);
+    order: var(--tabcontent-order);
     display: none;
     border-color: transparent;
     --tabcontent-radius-ss: 0;
@@ -794,12 +795,12 @@
     --tabcontent-radius-ee: 0;
     --tabcontent-order: 1;
     width: 100%;
-    margin: var(--0tabcontent-margin);
+    margin: var(--tabcontent-margin);
     border-width: var(--border);
-    border-start-start-radius: var(--0tabcontent-radius-ss);
-    border-start-end-radius: var(--0tabcontent-radius-se);
-    border-end-start-radius: var(--0tabcontent-radius-es);
-    border-end-end-radius: var(--0tabcontent-radius-ee);
+    border-start-start-radius: var(--tabcontent-radius-ss);
+    border-start-end-radius: var(--tabcontent-radius-se);
+    border-end-start-radius: var(--tabcontent-radius-es);
+    border-end-end-radius: var(--tabcontent-radius-ee);
   }
   .stat-value {
     grid-column-start: 1;
@@ -860,7 +861,7 @@
     align-items: center;
     align-self: stretch;
     white-space: nowrap;
-    margin: var(--0divider-m, 1rem 0);
+    margin: var(--divider-m, 1rem 0);
     --divider-color: color-mix(in srgb, var(--color-base-content) 10%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       --divider-color: color-mix(in oklab, var(--color-base-content) 10%, transparent);
@@ -870,7 +871,7 @@
       height: calc(0.25rem * 0.5);
       width: 100%;
       flex-grow: 1;
-      background-color: var(--0divider-color);
+      background-color: var(--divider-color);
     }
     @media print {
       &:before, &:after {
@@ -901,8 +902,8 @@
     flex-wrap: wrap;
     --tabs-height: auto;
     --tabs-direction: row;
-    height: var(--0tabs-height);
-    flex-direction: var(--0tabs-direction);
+    height: var(--tabs-height);
+    flex-direction: var(--tabs-direction);
   }
   .stat {
     display: inline-grid;
@@ -937,10 +938,10 @@
     --join-es: 0;
     --join-ee: 0;
     :where(.join-item) {
-      border-start-start-radius: var(--0join-ss, 0);
-      border-start-end-radius: var(--0join-se, 0);
-      border-end-start-radius: var(--0join-es, 0);
-      border-end-end-radius: var(--0join-ee, 0);
+      border-start-start-radius: var(--join-ss, 0);
+      border-start-end-radius: var(--join-se, 0);
+      border-end-start-radius: var(--join-es, 0);
+      border-end-end-radius: var(--join-ee, 0);
       * {
         --join-ss: var(--radius-field);
         --join-se: var(--radius-field);
@@ -1011,8 +1012,8 @@
   .btn-circle {
     border-radius: calc(infinity * 1px);
     padding-inline: calc(0.25rem * 0);
-    width: var(--0size);
-    height: var(--0size);
+    width: var(--size);
+    height: var(--size);
   }
   .size-full {
     width: 100%;
@@ -1087,9 +1088,6 @@
   .flex-col {
     flex-direction: column;
   }
-  .place-content-center {
-    place-content: center;
-  }
   .content-start {
     align-content: flex-start;
   }
@@ -1113,8 +1111,14 @@
   .overflow-auto {
     overflow: auto;
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .overscroll-none {
     overscroll-behavior: none;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .rounded-box {
     border-radius: var(--radius-box);
@@ -1255,20 +1259,20 @@
   .btn-soft {
     &:not(.btn-active, :hover, :active:focus, :focus-visible, :disabled, [disabled], .btn-disabled) {
       --btn-shadow: "";
-      --btn-fg: var(--0btn-color, var(--color-base-content));
-      --btn-bg: var(--0btn-color, var(--color-base-content));
+      --btn-fg: var(--btn-color, var(--color-base-content));
+      --btn-bg: var(--btn-color, var(--color-base-content));
       @supports (color: color-mix(in lab, red, red)) {
         --btn-bg: color-mix(
       in oklab,
-      var(--0btn-color, var(--color-base-content)) 8%,
+      var(--btn-color, var(--color-base-content)) 8%,
       var(--color-base-100)
     );
       }
-      --btn-border: var(--0btn-color, var(--color-base-content));
+      --btn-border: var(--btn-color, var(--color-base-content));
       @supports (color: color-mix(in lab, red, red)) {
         --btn-border: color-mix(
       in oklab,
-      var(--0btn-color, var(--color-base-content)) 10%,
+      var(--btn-color, var(--color-base-content)) 10%,
       var(--color-base-100)
     );
       }
@@ -1302,7 +1306,7 @@
   }
 }
 @layer base {
-  :root:has(input.theme-controller[value=synthwave]:checked),[data-theme=synthwave] {
+  :where(:root),:root:has(input.theme-controller[value=synthwave]:checked),[data-theme=synthwave] {
     color-scheme: dark;
     --color-base-100: oklch(15% 0.09 281.288);
     --color-base-200: oklch(20% 0.09 281.288);
@@ -1356,7 +1360,7 @@
 }
 @layer base {
   :root, [data-theme] {
-    background-color: var(--0root-bg, var(--color-base-100));
+    background-color: var(--root-bg, var(--color-base-100));
     color: var(--color-base-content);
   }
 }

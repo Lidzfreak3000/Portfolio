@@ -1,12 +1,7 @@
 @import 'tailwindcss';
 @source ".././public/*.{html,js}";
 @plugin "daisyui" {
-  themes: synthwave;
-  root: ":root";
-  include: ;
-  exclude: ;
-  prefix: ;
-  logs: true;
+  themes: synthwave --default;
 }
 
 @theme {
