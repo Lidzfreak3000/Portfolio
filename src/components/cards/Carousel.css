@@ -1,8 +1,7 @@
 #carousel-indicator-buttons {
     position: relative;
     top: 26vh;
-
-    @apply flex size-fit justify-center mx-auto gap-2 p-2
+    display: flex;
 }
 
 .carousel-card-wrapper {
@@ -11,8 +10,6 @@
     top: auto;
     left: auto;
     width: 50vw;
-
-    @apply rounded-2xl 
 }
 
 .carousel-card-wrapper::before {
@@ -22,17 +19,27 @@
             transparent 80deg);
     animation: border-spin 7s linear infinite;
 
-    @apply absolute h-[400%] w-[400%] content-[''] left-[-150%] top-[-150%]
+    position: absolute;
+    content: '';
+
+    height: 400%;
+    left: -150%;
+    top: -150%;
+    width: 400%;
 }
 
 .carousel-card-content {
     overflow: hidden;
-    background-color: rgba(19, 11, 48, 1);
-    @apply absolute w-[calc(100%-8px)] h-[calc(100%-8px)] top-[4px] left-[4px] rounded-2xl p-4
+    background-color: var(--color-base-100);
+
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
 }
 
 .carousel {
-    overflow: hidden;
     position: relative;
     top: 25vh;
     left: 20vw;
