@@ -1,0 +1,9 @@
+@layer utilities {
+    .stat {
+      &:not(:last-child) {
+        @supports (color: color-mix(in lab, red, red)) {
+	            border-inline-end: var(--border) dashed color-mix(in oklab, currentColor, #0000);
+            }
+        }
+    }
+}

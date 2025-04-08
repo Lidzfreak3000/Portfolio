@@ -1,0 +1,7 @@
+.tabs .tab {
+    --tab-border-color: var(--color-neutral)
+}
+
+.tab-content {
+    border-color: var(--color-neutral);
+}
