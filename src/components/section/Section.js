@@ -14,7 +14,7 @@ function Section(props) {
 
     return (
         <div id={props.id} className="section overscroll-none">
-            <header className="sectionHeader">
+            <header className="sectionHeader md:top-[20vh]">
                 <h1 className="mx-auto w-fit text-7xl">{props.id}</h1>
             </header>
             {cardContent}

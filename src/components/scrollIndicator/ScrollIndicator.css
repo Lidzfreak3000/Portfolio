@@ -1,11 +1,9 @@
 .scroll-indicator {
-    z-index: 99;
+
     position: fixed;
-    right: 5%;
-    top: 50%;
-    transform: translateY(-50%);
+    width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 40px;
 }
 

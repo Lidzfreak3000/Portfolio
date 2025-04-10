@@ -2,11 +2,11 @@ import './ScrollIndicator.css'
 import React from 'react';
 
 function ScrollIndicator(props) {
-    const activeSectionBtn = "btn btn-active btn-circle btn-soft btn-accent"
-    const inactiveSectionBtn = "btn btn-circle btn-soft bg-white"
+    const activeSectionBtn = "btn dock-active md:btn-active md:btn-circle md:btn-soft md:btn-accent"
+    const inactiveSectionBtn = "btn md:btn-circle md:btn-soft md:bg-white"
 
     return (
-        <div className="scroll-indicator">
+        <div className="md:scroll-indicator dock dock-xl place-content-evenly">
             <div className="tooltip tooltip-accent" data-tip="home">
                 <a href="#home" className={props.visibileSection == "home" ? activeSectionBtn : inactiveSectionBtn}>
                     {props.visibileSection == "home" ? <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

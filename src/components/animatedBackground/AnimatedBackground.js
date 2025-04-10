@@ -25,9 +25,6 @@ function AnimatedBackground() {
                 </div>
             </div>
             <div id="landscape">
-                {/* <div id="road" className="bg-blend-overlay" >
-                    <div id="laneLines" className="" />
-                </div> */}
                 <div id="ground" />
             </div>
         </>
