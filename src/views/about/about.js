@@ -6,7 +6,7 @@ import Professional from "./tabs/tab-Professional";
 function About(props) {
     return (
         <Section id="about" setVisibleSection={props.setVisibleSection}>
-            <div className="tabs tabs-border flex h-[90%] content-start">
+            <div className="tabs tabs-lift">
                 <Professional />
                 <Personal />
             </div>

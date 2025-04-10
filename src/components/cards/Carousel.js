@@ -56,12 +56,12 @@ function Carousel(props) {
 
     return (
         <>
-            <div className="carousel carousel-center bg-neutral rounded-box space-x-4 p-4">
+            <div className="carousel carousel-center bg-base-300 rounded-box space-x-4 p-4">
                 {props.children}
             </div>
-            <div id="carousel-indicator-buttons" className="join bg-neutral rounded-box">
+            <div id="carousel-indicator-buttons" className="join rounded-box size-fit justify-center mx-auto gap-2 p-2">
                 <button className="join-item btn" onClick={() => {scrollToPage("left")}} disabled={currentCarouselItem <= 1}>«</button>
-                <button className="join-item btn">Project {currentCarouselItem}</button>
+                <button className="join-item btn">{currentCarouselItem}/{carouselItems.length}</button>
                 <button className="join-item btn" onClick={() => {scrollToPage("right")}} disabled={currentCarouselItem >= carouselItems.length}>»</button>
             </div>
         </>
