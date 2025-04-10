@@ -40,9 +40,9 @@ function Professional(props) {
     return (
         <>
             <input type="radio" name="my_tabs_1" className="tab" aria-label="Professional" defaultChecked />
-            <div className="tab-content border-transparent bg-base-300 p-10 content-start">
+            <div className="tab-content bg-base-100 p-6">
                 <div className="w-full h-full">
-                    <div className="stats shadow relative w-full overflow-auto">
+                    <div className="stats relative w-full overflow-auto">
                         <div className="stat">
                             <div className="stat-title">Created Serverless API</div>
                             <div className="stat-value text-primary"> 1M+</div>
@@ -62,7 +62,7 @@ function Professional(props) {
                         </div>
                     </div>
                     <div className="divider divider-neutral" />
-                    <div className="stats shadow relative w-full">
+                    <div className="stats relative w-full">
                         <div className="stat">
                             <div className="stat-title">Total Career Length</div>
                             <div className="stat-value">

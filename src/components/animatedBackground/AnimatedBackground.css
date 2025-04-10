@@ -87,7 +87,7 @@
 
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgb(252, 70, 106), oklch(var(--b3)));
+    background: radial-gradient(circle at center, rgb(252, 70, 106), var(--color-base-100));
 }
 
 #sun {
@@ -109,7 +109,7 @@
     right: 0;
 
     /* Color the sun */
-    background: radial-gradient(circle at center, oklch(var(--p)), rgb(252, 70, 106) 100%);
+    background: radial-gradient(circle at center, var(--color-primary), rgb(252, 70, 106) 100%);
     /* filter: blur(0.1rem); */
 }
 
@@ -124,19 +124,19 @@
     perspective: 400px;
     overflow-y: hidden;
     overflow-x: hidden;
+    background-color: var(--color-base-100);
 }
 
 #ground {
     background-size: 40px 40px;
     background-image:
-        linear-gradient(to right, oklch(var(--p)) 1px, transparent 1px),
-        linear-gradient(to bottom, oklch(var(--p)) 1px, transparent 1px);
+        linear-gradient(to right, var(--color-primary) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--color-primary) 1px, transparent 1px);
     height: inherit;
     transform: rotateX(50deg) scale3d(1.5, 1.5, 1.5);
     transform-origin: top center;
     animation: 5s linear infinite crawlingWall;
     background-position-y: top;
-    box-shadow: 100px orange;
 }
 
 #road {

@@ -24,11 +24,11 @@ function AnimatedBackground() {
                     <div className="mountain mountain-12"></div>
                 </div>
             </div>
-            <div id="landscape" className="bg-base-300">
+            <div id="landscape">
                 {/* <div id="road" className="bg-blend-overlay" >
                     <div id="laneLines" className="" />
                 </div> */}
-                <div id="ground" className="" />
+                <div id="ground" />
             </div>
         </>
     );

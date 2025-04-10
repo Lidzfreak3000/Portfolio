@@ -22,7 +22,7 @@ function ChatMessage(props) {
                         src={profilePicture} />
                 </div>
             </div>
-            <div className="chat-bubble place-content-center">
+            <div className="chat-bubble">
                 {
                     isLoading ?
                         <LoadingText /> :
