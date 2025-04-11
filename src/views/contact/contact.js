@@ -3,7 +3,7 @@ import Section from "../../components/section/Section";
 function Contact(props) {
     return (
         <Section id="contact" setVisibleSection={props.setVisibleSection}>
-            <div className="flex items-center justify-center size-full">
+            <div className="flex items-center justify-center gap-4">
                 <fieldset className="fieldset bg-base-200 border border-base-300 p-4 rounded-box">
                     <legend className="fieldset-legend">Email me</legend>
                     {/* Fields */}
