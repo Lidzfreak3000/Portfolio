@@ -1,6 +1,13 @@
 import Section from "../../components/section/Section";
 
+
 function Contact(props) {
+    
+
+    async function handleSubmit() {
+
+    }
+
     return (
         <Section id="contact" setVisibleSection={props.setVisibleSection}>
             <div className="flex items-center justify-center gap-4">
@@ -53,7 +60,7 @@ function Contact(props) {
                     </div>
 
                     {/* Submit Button */}
-                    <button className="btn btn-neutral mt-4">Login</button>
+                    <button className="btn btn-neutral mt-4" onClick={() => {handleSubmit()}}>Submit</button>
                 </fieldset>
             </div>
         </Section>
