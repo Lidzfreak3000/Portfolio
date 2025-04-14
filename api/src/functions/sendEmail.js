@@ -6,9 +6,7 @@ app.http('sendEmail', {
     authLevel: 'anonymous',
     handler: async (request, context) => {
         const resend = new Resend(process.env.RESEND_KEY);
-
-        const requestBody = req.body;
-        console.log(requestBody)
+        const requestBody = await request.json();
 
         const { data, error } = await resend.emails.send({
             from: `John's Portfolio <noreply@johnduncan.tech>`,
