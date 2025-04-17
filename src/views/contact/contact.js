@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Section from "../../components/section/Section";
 import { AlertContext } from "../../context/AlertContext";
 
@@ -25,21 +25,11 @@ function Contact(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        addAlert({
-            message: 'This is a success message!',
-            type: 'success',
-            timeout: true
-          });
-
-        // Add email address to an array of addresses for the recipients
-        var recipientAddresses = ['j.r.nerdy@hotmail.com'];
-        recipientAddresses.push(formData.email);
-
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
         const raw = JSON.stringify({
-            "recipients": recipientAddresses,
+            "recipients": formData.email,
             "subject": "Portfolio Contact Form: " + formData.subject,
             "body": formData.message
         });
@@ -52,10 +42,36 @@ function Contact(props) {
         };
 
         fetch(baseUrl, requestOptions)
-            .then((response) => response.text())
-            .then((result) => console.log(result))
-            .catch((error) => console.error(error));
+            .then((response) => response.json())
+            .then((result) => {
+                if (result.statusCode) {
+                    addAlert({
+                        message: result.message,
+                        type: 'error',
+                        timeout: false
+                    })
+                } else {
+                    addAlert({
+                        message: 'Email has been sent! Make sure to check your spam folder for the confirmation email',
+                        type: 'success',
+                        timeout: true
+                    })
+                }
+            })
+            .catch((error) => addAlert({
+                message: JSON.stringify(error),
+                type: 'error',
+                timeout: false
+            }));
     };
+
+    useEffect(() => {
+        addAlert({
+            message: 'This is a success message!',
+            type: 'success',
+            timeout: false,
+        });
+    }, [])
 
     return (
         <Section id="contact" setVisibleSection={props.setVisibleSection} alerts={alerts}>
