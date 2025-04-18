@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
-import ScrollIndicator from '../scrollIndicator/ScrollIndicator.js'
-import CustomCursor from '../cursorTracker/CursorTracker.js';
-import AnimatedBackground from '../animatedBackground/AnimatedBackground.js'
+import ScrollIndicator from '../scrollIndicator/ScrollIndicator.jsx'
+import CustomCursor from '../cursorTracker/CursorTracker.jsx';
+import AnimatedBackground from '../animatedBackground/AnimatedBackground.jsx'
 
 import './App.css';
-import Home from '../../views/home/home.js';
-import About from '../../views/about/about.js';
-import Projects from '../../views/projects/projects.js';
-import Contact from '../../views/contact/contact.js';
-import ClosableAlert from '../alerts/ClosableAlert.js';
-import AlertsContainer from '../alerts/AlertsContainer.js';
-import { AlertProvider } from '../../context/AlertContext.js';
+import Home from '../../views/home/home.jsx';
+import About from '../../views/about/about.jsx';
+import Projects from '../../views/projects/projects.jsx';
+import Contact from '../../views/contact/contact.jsx';
+import AlertsContainer from '../alerts/AlertsContainer.jsx';
+import { AlertProvider } from '../../context/AlertContext.jsx';
 
 function App() {
   const [visibileSection, setVisibleSection] = useState("home");

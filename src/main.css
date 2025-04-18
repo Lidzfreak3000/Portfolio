@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@source "../public/*.{html,js}";
+@plugin "daisyui" {
+  themes: synthwave --default;
+}
+
+
+
+@utility pause-animation {
+  animation-play-state: paused;
+}
+
