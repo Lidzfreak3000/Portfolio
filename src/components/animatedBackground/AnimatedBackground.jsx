@@ -6,28 +6,25 @@ function AnimatedBackground() {
     return (
         <>
             <div id="sky">
-                <div id="sun" className="" />
-                <div id="stars"></div>
-                <div id="stars2"></div>
-                <div id="stars3"></div>
+                <div id="sun" />
+                <div id="stars" />
+                <div id="stars2" />
+                <div id="stars3" />
                 <div className="mountain-range">
-                    <div className="mountain mountain-1"></div>
-                    <div className="mountain mountain-2"></div>
-                    <div className="mountain mountain-3"></div>
-                    <div className="mountain mountain-5"></div>
-                    <div className="mountain mountain-6"></div>
-                    <div className="mountain mountain-7"></div>
-                    <div className="mountain mountain-8"></div>
-                    <div className="mountain mountain-9"></div>
-                    <div className="mountain mountain-10"></div>
-                    <div className="mountain mountain-11"></div>
-                    <div className="mountain mountain-12"></div>
+                    <div className="mountain mountain-1" />
+                    <div className="mountain mountain-2" />
+                    <div className="mountain mountain-3" />
+                    <div className="mountain mountain-5" />
+                    <div className="mountain mountain-6" />
+                    <div className="mountain mountain-7" />
+                    <div className="mountain mountain-8" />
+                    <div className="mountain mountain-9" />
+                    <div className="mountain mountain-10" />
+                    <div className="mountain mountain-11" />
+                    <div className="mountain mountain-12" />
                 </div>
             </div>
             <div id="landscape">
-                {/* <div id="road" className="bg-blend-overlay" >
-                    <div id="laneLines" className="" />
-                </div> */}
                 <div id="ground" />
             </div>
         </>
