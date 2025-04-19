@@ -2,8 +2,8 @@ import './ScrollIndicator.css'
 import React from 'react';
 
 function ScrollIndicator(props) {
-    const activeSectionBtn = "btn dock-active md:btn-active md:btn-circle md:btn-soft md:btn-accent"
-    const inactiveSectionBtn = "btn md:btn-circle md:btn-soft md:bg-white"
+    const activeSectionBtn = "btn btn-active btn-circle btn-soft btn-accent"
+    const inactiveSectionBtn = "btn btn-circle btn-soft bg-white"
 
     return (
         <div className="md:scroll-indicator dock dock-xl place-content-evenly">
