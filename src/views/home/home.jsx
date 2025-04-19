@@ -41,7 +41,7 @@ function Home(props) {
                 Or <a href="#projects" className="link link-secondary">Projects</a> to see some cool stuff I have made (including this website).
             </ChatMessage>
             <ChatMessage id="4" delay={defaultDelay} currentMessage={currentMessage}>
-                Lastly, if you want to get in touch with me, you use the form in <a href="#contact" className="link link-secondary">Contact</a> or any of my socials.
+                Lastly, if you want to get in touch with me, use the form in <a href="#contact" className="link link-secondary">Contact</a> or any of my socials.
             </ChatMessage>
             <ChatMessage id="5" delay={defaultDelay} currentMessage={currentMessage}>
                 <div className="space-x-4">
