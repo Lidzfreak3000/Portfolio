@@ -8,7 +8,7 @@ function AlertsContainer(props) {
     const { alerts, removeAlert } = useContext(AlertContext);
 
     return (
-        <div id="alerts-container" className="toast toast-top toast-center">
+        <div id="alerts-container" className="toast toast-top toast-center z-10">
             {alerts.map((alert) => (
                 <Alert
                     key={alert.id}
