@@ -1,19 +1,14 @@
 .card-wrapper {
     position: relative;
     overflow: hidden;
-    background-color: var(--color-base-300);
+    background-color: var(--color-neutral);
 
     border-radius: 1rem;
-    height: 70vh;
-    left: 5vw;
-    top: 6vh;
-    width: 90vw;
 
 }
 
 .card-wrapper::before {
     background: conic-gradient(var(--color-primary) 0deg,
-            rgba(252, 70, 106, 1) 0deg,
             transparent 80deg);
     animation: border-spin 7s linear infinite;
 
@@ -24,7 +19,6 @@
     left: -100%;
     top: -100%;
     width: 300%;
-
 }
 
 .card-content {
@@ -32,10 +26,10 @@
     background-color: var(--color-base-100);
 
     position: absolute;
-    top: 4px;
-    left: 4px;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
 }
 
 @keyframes border-spin {

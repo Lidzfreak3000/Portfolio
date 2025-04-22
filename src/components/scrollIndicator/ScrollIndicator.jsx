@@ -6,7 +6,7 @@ function ScrollIndicator(props) {
     const inactiveSectionBtn = "btn btn-circle btn-dash btn-neutral swap swap-rotate"
 
     return (
-        <div className="dock dock-md rounded-box border-2 border-neutral mx-2 mb-2 w-auto md:w-fit md:flex-col md:h-auto md:mt-32 md:mb-32 md:top-[calc(0.25rem*0)] md:left-[unset]">
+        <div className="dock dock-md rounded-box border-2 border-neutral mx-2 mb-2 w-auto md:w-fit md:flex-col md:h-[calc(4rem+env(--safe-area-inset-bottom))] md:my-32 md:top-[calc(0.25rem*0)] md:left-[unset]">
             <div className="tooltip tooltip-accent" data-tip="home">
                 <a href="#home" className={props.visibileSection == "home" ? activeSectionBtn : inactiveSectionBtn}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-[1.2em] swap-on">

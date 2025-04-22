@@ -56,13 +56,13 @@ function Carousel(props) {
 
     return (
         <>
-            <div className="carousel carousel-center bg-base-300 rounded-box space-x-4 p-4">
+            <div className="flex-7/10 grow m-2 carousel carousel-center bg-base-300 rounded-box space-x-2 p-4 border-2 border-neutral">
                 {props.children}
             </div>
-            <div id="carousel-indicator-buttons" className="join rounded-box size-fit justify-center mx-auto gap-2 p-2">
-                <button className="join-item btn" onClick={() => {scrollToPage("left")}} disabled={currentCarouselItem <= 1}>«</button>
-                <button className="join-item btn">{currentCarouselItem}/{carouselItems.length}</button>
-                <button className="join-item btn" onClick={() => {scrollToPage("right")}} disabled={currentCarouselItem >= carouselItems.length}>»</button>
+            <div id="carousel-indicator-buttons" className="flex-1/10 join rounded-box m-auto gap-2 p-2 bg-base-100 border-2 border-neutral">
+                <button className="join-item btn btn-neutral h-full" onClick={() => {scrollToPage("left")}} disabled={currentCarouselItem <= 1}>«</button>
+                <button className="join-item btn btn-neutral h-full">{currentCarouselItem}/{carouselItems.length}</button>
+                <button className="join-item btn btn-neutral h-full" onClick={() => {scrollToPage("right")}} disabled={currentCarouselItem >= carouselItems.length}>»</button>
             </div>
         </>
     );
