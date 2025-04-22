@@ -13,13 +13,11 @@ function Section(props) {
     }
 
     return (
-        <div id={props.id} className="section overscroll-none">
-            <div className="flex-1/10" /> {/* This is a placeholder for the alerts container in screens below the 'md' breakpoint */}
-            <header className="flex-1/10 sectionHeader">
-                <h1 className="mx-auto w-fit text-7xl">{props.id}</h1>
+        <div id={props.id} className="section overscroll-none size-full max-md:pb-[calc(5rem+env(safe-area-inset-bottom))] md:pr-[calc(5rem+env(safe-area-inset-bottom))] md:flex-col">
+            <header className="flex-1/10 flex sectionHeader">
+                <h1 className="m-auto text-center text-5xl size-fit">{props.id}</h1>
             </header>
             {cardContent}
-            <div className="flex-1/10" /> {/* This is a placeholder for the alerts container in screens below the 'md' breakpoint */}
         </div>
     );
 }
