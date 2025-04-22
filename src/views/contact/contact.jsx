@@ -75,8 +75,8 @@ function Contact(props) {
 
     return (
         <Section id="contact" setVisibleSection={props.setVisibleSection} alerts={alerts}>
-            <form className="flex items-center justify-center gap-4" onSubmit={handleSubmit}>
-                <fieldset className="fieldset bg-base-200 border border-base-300 p-4 rounded-box">
+            <form className="flex size-full" onSubmit={handleSubmit}>
+                <fieldset className="m-auto fieldset bg-base-200 border border-base-300 p-4 rounded-box">
                     <legend className="fieldset-legend">Email me</legend>
                     {/* Form Fields */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
