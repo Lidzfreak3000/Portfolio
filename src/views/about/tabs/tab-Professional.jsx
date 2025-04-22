@@ -17,11 +17,11 @@ function Professional(props) {
         setInterval(() => {
             const dateNow = new Date();
 
-            const years = dateNow.getFullYear() - startDate.getFullYear()
-            const days = dateNow.getDate() - startDate.getDate()
-            const hours = dateNow.getHours() - startDate.getHours()
-            const minutes = dateNow.getMinutes() - startDate.getMinutes()
-            const seconds = dateNow.getSeconds() - startDate.getSeconds()
+            const years = Math.abs(dateNow.getFullYear() - startDate.getFullYear())
+            const days = Math.abs(dateNow.getDate() - startDate.getDate())
+            const hours = Math.abs(dateNow.getHours() - startDate.getHours())
+            const minutes = Math.abs(dateNow.getMinutes() - startDate.getMinutes())
+            const seconds = Math.abs(dateNow.getSeconds() - startDate.getSeconds())
 
             const currentTime = {
                 years: years,
@@ -33,40 +33,40 @@ function Professional(props) {
 
             setTime(currentTime)
 
-        }, 1000)
+        }, 500)
 
     }, [])
 
     return (
         <>
             <input type="radio" name="my_tabs_1" className="tab" aria-label="Professional" defaultChecked />
-            <div className="tab-content bg-base-100 p-6">
-                <div className="w-full h-full">
-                    <div className="stats relative w-full overflow-auto">
-                        <div className="stat">
+            <div className="tab-content bg-base-100 p-2">
+                <div className="flex flex-row md:flex-col w-full h-full">
+                    <div className="shrink stats relative md:w-full overflow-auto max-md:stats-vertical border-dashed border-1 border-neutral">
+                        <div className="stat p-2 max-md:place-items-center">
                             <div className="stat-title">Created Serverless API</div>
                             <div className="stat-value text-primary"> 1M+</div>
                             <div className="stat-desc">Monthly Requests</div>
                         </div>
 
-                        <div className="stat">
+                        <div className="stat p-2 max-md:place-items-center">
                             <div className="stat-title">Modernized SQL DBs</div>
                             <div className="stat-value text-secondary">All 100</div>
                             <div className="stat-desc">NC counties</div>
                         </div>
 
-                        <div className="stat">
+                        <div className="stat p-2 max-md:place-items-center">
                             <div className="stat-title">Directed IT For</div>
                             <div className="stat-value text-accent">6</div>
                             <div className="stat-desc">Portfolio Companies</div>
                         </div>
                     </div>
-                    <div className="divider divider-neutral" />
-                    <div className="stats relative w-full">
-                        <div className="stat">
-                            <div className="stat-title">Total Career Length</div>
+                    <div className="shrink divider divider-neutral max-md:divider-horizontal" />
+                    <div className="shrink stats relative w-fit px-[unset] m-auto border-dashed border-1 border-neutral">
+                        <div className="stat p-2 max-md:place-items-center">
+                            <div className="stat-title mb-2">Total Career Length</div>
                             <div className="stat-value">
-                                <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+                                <div className="grid grid-flow-row-dense max-md:grid-cols-1 md:grid-flow-col gap-5 text-center auto-cols-max">
                                     <div className="flex flex-col font-normal">
                                         <span className="countdown font-extrabold text-5xl">
                                             <span style={{ "--value": time.years }} aria-live="polite" aria-label={time.years}>{time.years}</span>
