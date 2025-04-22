@@ -55,7 +55,7 @@ function Carousel(props) {
     }, [carouselItems]);
 
     return (
-        <div className="flex-9/10 flex flex-col size-full md:mb-16 md:mx-32">
+        <div className="flex-9/10 grow flex flex-col md:mb-16 md:mx-32">
             <div className="flex-9/10 grow m-2 carousel carousel-center bg-base-300 rounded-box space-x-2 p-4 border-2 border-neutral">
                 {props.children}
             </div>
