@@ -65,13 +65,13 @@ function Contact(props) {
             }));
     };
 
-    useEffect(() => {
-        addAlert({
-            message: 'This is a success message!',
-            type: 'success',
-            timeout: false,
-        });
-    }, [])
+    // useEffect(() => {
+    //     addAlert({
+    //         message: 'This is a success message!',
+    //         type: 'success',
+    //         timeout: false,
+    //     });
+    // }, [])
 
     return (
         <Section id="contact" setVisibleSection={props.setVisibleSection} alerts={alerts}>
