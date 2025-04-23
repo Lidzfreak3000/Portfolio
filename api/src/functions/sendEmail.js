@@ -3,7 +3,7 @@ const { Resend } = require('resend');
 
 app.http('sendEmail', {
     methods: ['POST'],
-    authLevel: 'anonymous',
+    authLevel: 'function',
     handler: async (request, context) => {
         const resend = new Resend(process.env.RESEND_KEY);
         const requestBody = await request.json();
