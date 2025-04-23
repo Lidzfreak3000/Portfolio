@@ -13,9 +13,9 @@ function Section(props) {
     }
 
     return (
-        <div id={props.id} className="section overscroll-none">
-            <header className="sectionHeader">
-                <h1 className="mx-auto w-fit text-7xl">{props.id}</h1>
+        <div id={props.id} className="section overscroll-none size-full max-md:pb-[calc(5rem+env(safe-area-inset-bottom))] md:pr-[calc(5rem+env(safe-area-inset-bottom))] md:flex-col">
+            <header className="flex-1/10 flex sectionHeader">
+                <h1 className="m-auto text-center text-5xl size-fit">{props.id}</h1>
             </header>
             {cardContent}
         </div>

@@ -1,15 +1,6 @@
-#carousel-indicator-buttons {
-    position: relative;
-    top: 26vh;
-    display: flex;
-}
-
 .carousel-card-wrapper {
     overflow: hidden;
     position: relative;
-    top: auto;
-    left: auto;
-    width: 50vw;
 }
 
 .carousel-card-wrapper::before {
@@ -41,10 +32,6 @@
 
 .carousel {
     position: relative;
-    top: 25vh;
-    left: 20vw;
-    width: 60vw;
-    height: 55vh;
 }
 
 @keyframes border-spin {

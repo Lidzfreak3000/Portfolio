@@ -1,0 +1,19 @@
+.toast {
+    top: calc(0.25rem * 4);
+    bottom: auto;
+    --toast-y: 0;
+    inset-inline-start: calc(1/2 * 100%);
+    inset-inline-end: calc(1/2 * 100%);
+    --toast-x: -50%;
+}
+
+@media (min-width: 768px) {
+    .toast {
+        top: auto;
+        bottom: calc(0.25rem * 4);
+        --toast-y: 0;
+        inset-inline-start: calc(0.25rem * 4);
+        inset-inline-end: auto;
+        --toast-x: 0;
+    }
+}

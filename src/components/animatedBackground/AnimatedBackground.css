@@ -137,6 +137,7 @@
     transform-origin: top center;
     animation: 5s linear infinite crawlingWall;
     background-position-y: top;
+    box-shadow: 100px orange;
 }
 
 #road {
