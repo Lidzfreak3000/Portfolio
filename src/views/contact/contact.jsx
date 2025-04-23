@@ -4,7 +4,7 @@ import { AlertContext } from "../../context/AlertContext";
 
 
 function Contact(props) {
-    const baseUrl = "http://localhost:7071/api/sendEmail";
+    const baseUrl = import.meta.env.VITE_API_URL;
     const { addAlert } = useContext(AlertContext);
     const [alerts, setAlerts] = useState([]);
     const [formData, setFormData] = useState({
