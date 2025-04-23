@@ -39,30 +39,30 @@ function Professional(props) {
 
     return (
         <>
-            <input type="radio" name="my_tabs_1" className="tab" aria-label="Professional" defaultChecked />
+            <input type="radio" name="about_tabs" className="tab" aria-label="Professional" defaultChecked />
             <div className="tab-content bg-base-100 p-2">
                 <div className="flex flex-row md:flex-col w-full h-full">
-                    <div className="shrink stats relative md:w-full overflow-auto max-md:stats-vertical border-dashed border-1 border-neutral">
-                        <div className="stat p-2 max-md:place-items-center">
+                    <div className="shrink stats relative md:w-full overflow-auto max-md:stats-vertical">
+                        <div className="stat max-md:p-2 place-items-center">
                             <div className="stat-title">Created Serverless API</div>
                             <div className="stat-value text-primary"> 1M+</div>
                             <div className="stat-desc">Monthly Requests</div>
                         </div>
 
-                        <div className="stat p-2 max-md:place-items-center">
+                        <div className="stat max-md:p-2 place-items-center">
                             <div className="stat-title">Modernized SQL DBs</div>
                             <div className="stat-value text-secondary">All 100</div>
                             <div className="stat-desc">NC counties</div>
                         </div>
 
-                        <div className="stat p-2 max-md:place-items-center">
+                        <div className="stat max-md:p-2 place-items-center">
                             <div className="stat-title">Directed IT For</div>
                             <div className="stat-value text-accent">6</div>
                             <div className="stat-desc">Portfolio Companies</div>
                         </div>
                     </div>
                     <div className="shrink divider divider-neutral max-md:divider-horizontal" />
-                    <div className="shrink stats relative w-fit px-[unset] m-auto border-dashed border-1 border-neutral">
+                    <div className="shrink stats relative w-fit px-[unset] m-auto">
                         <div className="stat p-2 max-md:place-items-center">
                             <div className="stat-title mb-2">Total Career Length</div>
                             <div className="stat-value">
