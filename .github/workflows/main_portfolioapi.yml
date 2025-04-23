@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js project to Azure Function App - portfolioApi
+name: Prod | Azure Function - portfolioApi
 
 on:
   push:
@@ -12,7 +12,11 @@ on:
 env:
   AZURE_FUNCTIONAPP_PACKAGE_PATH: './api' # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '20' # set this to the node version to use (supports 8.x, 10.x, 12.x)
-  VITE_API_URL: ${{ secrets.VITE_API_URL }}
+
+defaults:
+  run:
+    working-directory: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
+
 
 jobs:
   build:
