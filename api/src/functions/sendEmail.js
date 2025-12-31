@@ -9,13 +9,13 @@ app.http('sendEmail', {
         const requestBody = await request.json();
 
         // Log the entire request
-        console.log(JSON.stringify(requestBody));
+        context.log(JSON.stringify(requestBody));
 
         // Add email address to an array of addresses for the recipients
         var recipientAddresses = ['j.r.nerdy@hotmail.com'];
         recipientAddresses.push(requestBody.recipients);
 
-        console.log(JSON.stringify(recipientAddresses));
+        context.log(JSON.stringify(recipientAddresses));
 
         const { data, error } = await resend.emails.send({
             from: `John's Portfolio <noreply@johnduncan.tech>`,
