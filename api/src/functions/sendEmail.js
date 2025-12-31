@@ -8,6 +8,9 @@ app.http('sendEmail', {
         const resend = new Resend(process.env.RESEND_KEY);
         const requestBody = await request.json();
 
+        // Log the entire request
+        console.log(JSON.stringify(requestBody));
+
         // Add email address to an array of addresses for the recipients
         var recipientAddresses = ['j.r.nerdy@hotmail.com'];
         recipientAddresses.push(requestBody.recipients);
